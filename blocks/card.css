@@ -1,0 +1,27 @@
+.card {
+    list-style-type: none;
+    width: 413px;
+}
+.card__img {
+    height: 413px;
+    width: 413px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+.card__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__title {
+    margin: 0;
+}
+.card__like-btn {
+    background-image: url("../images/like-icon-default.svg");
+    background-color: transparent;
+    width: 23px;
+    height: 20px;
+    border: none;
+}
