@@ -8,15 +8,21 @@
     object-fit: cover;
     display: block;
     border-radius: 10px;
+    margin-bottom: 12px;
 }
 .card__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
 }
 .card__title {
     margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+
 }
 .card__like-btn {
     background-image: url("../images/like-icon-default.svg");
