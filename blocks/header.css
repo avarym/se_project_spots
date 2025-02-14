@@ -3,8 +3,15 @@
     background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .header__logo {
     width: 94px;
     height: 26px;
+}
+
+@media screen and (max-width:650px) {
+    .header {
+        height: 46px;
+    }
 }
