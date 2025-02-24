@@ -1,21 +1,24 @@
 # Project 3: Spots
 
-### Overview  
+## Overview  and Features:
 
-* Intro  
-* Figma  
-* Images  
+This project is modeled after social media platforms, using a responsive layout that is compatible with a wide range of device screens, from mobile to desktop. It features a header, profile, content, and footer section. Flexbox and grid containers, interactive buttons, and truncated bodies of text are some of the smaller features implemented.
+
+**Technologies and Tools**
   
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+* HTML (BEM methodology)
+* CSS (flat file structure, at-import rules, )
+* Figma design [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+* GitHub
+* Git Bash terminal
+* Deployment on GitHub Pages
+
+**View my project**
+
+ [Link to the Project Site](https://avarym.github.io/se_project_spots/)
+ [Link to Video Walkthrough](https://www.loom.com/share/52d161f3a7a14040a3dde6d2c51b25c2?sid=7f3c1096-5c47-4c04-a305-2f58886b419c)
+
+**Future Plans for the Project**
+
+* add functionality to the site with JavaScript
+* edit profile, new post, and like button functions
