@@ -36,7 +36,7 @@
     border: none;
     opacity: 40%;
     transition: opacity .3s linear;
-    cursor: url(../images/pointer-icon.svg), pointer;
+    cursor: pointer;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

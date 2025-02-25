@@ -58,7 +58,7 @@
     font-size: 16px;
     line-height: 1;
     transition: opacity .3s linear;
-    cursor: url(../images/pointer-icon.svg), pointer;
+    cursor: pointer;
 }
 
 .profile__edit-btn:hover {
@@ -83,11 +83,11 @@
     font-size: 16px;
     line-height: 1;
     transition: opacity .3s linear;
-    cursor: url(../images/pointer-icon.svg), pointer;
+    cursor: pointer;
 }
 
 .profile__new-post-btn:hover {
-    opacity: 70%;
+    opacity: 80%;
 }
 
 .plus-icon {
