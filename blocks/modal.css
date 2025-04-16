@@ -1,0 +1,107 @@
+.modal {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal_opened {
+    visibility: visible;
+}
+
+.modal__container {
+    position: relative;
+    background-color: #fff;
+    max-width: 730px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px 50px;
+    border-radius: 8px;
+    
+}
+
+.modal__exit-btn {
+    position: absolute;
+    padding: 0;
+    top: 32px;
+    right: 50px;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    background-image: url(../images/close-icon.svg);
+    border: none;
+}
+
+.modal__title {
+    margin: 0 0 32px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.modal__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    gap: 8px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(33, 33, 33, .7);
+}
+
+.modal__input {
+    padding: 16px 12px;
+    max-width: 630px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;;
+    font-weight: 500;
+    font-size: 20px;
+    color: #212121;
+    border-color: rgba(0, 0, 0, .4);
+    border-radius: 8px;
+}
+
+.modal__submit-btn {
+    display: block;
+    padding: 0;
+    width: 156px;
+    height: 52px;
+    background-color: #212121;
+    color: #fff;
+    border-radius: 8px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;;
+    font-weight: 500;
+    font-size: 16;
+}
+
+@media screen and (max-width: 650px) {
+    .modal__container {
+        padding: 12px;
+    }
+
+    .modal__exit-btn {
+        top: 12px;
+        right: 12px;
+    }
+
+    .modal__title {
+        font-size: 20px;
+        margin: 10px 0 34px;
+    }
+
+    .modal__input {
+        font-size: 16px;
+    }
+
+    .modal__submit-btn {
+        max-width: none;
+        width: 100%;
+    }
+}
