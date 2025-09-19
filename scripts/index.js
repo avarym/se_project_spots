@@ -1,3 +1,11 @@
+const initialCards = [
+  {name: "Landscape in Film", link: "https://images.unsplash.com/photo-1757583013110-f1f821d9b398?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D"},
+  {name: "Green Arched Walkway", link: "https://images.unsplash.com/photo-1758061607997-9acb866c12e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NHx8fGVufDB8fHx8fA%3D%3D"},
+  {name: "Seaside Town", link: "https://images.unsplash.com/photo-1755867712452-871192ab3b2e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OXx8fGVufDB8fHx8fA%3D%3D"},
+  {name: "Cabin in the Tall Grasses", link: "https://images.unsplash.com/photo-1756916474895-bb296434aeeb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3M3x8fGVufDB8fHx8fA%3D%3D"},
+  {name: "Bridge Beneath Autumn Canopy", link: "https://images.unsplash.com/photo-1757995679273-c0bf33a90a5c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4Nnx8fGVufDB8fHx8fA%3D%3D"},
+  {name: "Step into the Dunes", link: "https://images.unsplash.com/photo-1757601154408-402910067c40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOTF8fHxlbnwwfHx8fHw%3D"}
+];
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileExitBtn = editProfileModal.querySelector(".modal__exit-btn");
@@ -58,3 +66,7 @@ function handleNewPostSubmit(evt) {
 }
 
 newPostModal.addEventListener('submit', handleNewPostSubmit);
+
+initialCards.forEach(function(obj) {
+  console.log(obj.name);
+});
