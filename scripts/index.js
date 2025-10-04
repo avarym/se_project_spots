@@ -21,6 +21,8 @@ const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const cardCaptionInput = newPostModal.querySelector("#card-image-caption"); 
 const cardLinkInput = newPostModal.querySelector("#card-image-input"); 
 const cardForm = document.forms["new-post"];
+const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
+const cardContainer = document.querySelector(".cards__list");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -67,6 +69,18 @@ function handleNewPostSubmit(evt) {
 
 newPostModal.addEventListener('submit', handleNewPostSubmit);
 
-initialCards.forEach(function(obj) {
-  console.log(obj.name);
+initialCards.forEach(function (item) {
+  console.log(item.name);
+  const newCard = getCardElement(item);
+  cardContainer.prepend(newCard);
 });
+
+function getCardElement(data) {
+let cardElement = cardTemplate.cloneNode(true);
+const cardElementTitle = cardElement.querySelector(".card__title");
+const cardElementImage = cardElement.querySelector(".card__img");
+cardElementImage.alt = `${data.name}`;
+cardElementImage.src = `${data.link}`;
+cardElementTitle.textContent = `${data.name}`;
+return cardElement;
+}
