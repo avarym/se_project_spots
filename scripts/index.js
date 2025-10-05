@@ -84,5 +84,11 @@ const cardElementImage = cardElement.querySelector(".card__img");
 cardElementImage.alt = `${data.name}`;
 cardElementImage.src = `${data.link}`;
 cardElementTitle.textContent = `${data.name}`;
+
+const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+cardLikeBtn.addEventListener("click", function(evt) {
+  evt.target.classList.toggle("card__like-btn_active");
+});
+
 return cardElement;
 }
