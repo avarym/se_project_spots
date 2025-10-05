@@ -61,8 +61,11 @@ editProfileModal.addEventListener('submit', handleProfileFormSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log("card cap: " + cardCaptionInput.value);
-  console.log("card link: " + cardLinkInput.value);
+  const newCardData = {
+    name: cardCaptionInput.value,
+    link: cardLinkInput.value
+  }
+  cardContainer.prepend(getCardElement(newCardData));
   closeModal(newPostModal);
   cardForm.reset();
 }
@@ -70,7 +73,6 @@ function handleNewPostSubmit(evt) {
 newPostModal.addEventListener('submit', handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
   const newCard = getCardElement(item);
   cardContainer.prepend(newCard);
 });
