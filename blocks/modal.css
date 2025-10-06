@@ -83,7 +83,38 @@
     border-radius: 8px;
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 16;
+    font-size: 16px;
+}
+
+.modal__figure {
+    position: relative;
+    margin: 0;
+}
+
+.modal__exit-btn_figure {
+    background-image: url(../images/Group\ 27.svg);
+    top: 0;
+    right: -52px;
+}
+
+.modal__img {
+    max-width: 80vw;
+    max-height: 80vh;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.modal__img-caption {
+    background-color: #212121;
+    color: #fff;
+    border-radius: 8px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    max-width: 80vw;
+    width: max-content;
+    line-height: 1.2;
+    padding: 4px 8px;
 }
 
 @media screen and (max-width: 650px) {
