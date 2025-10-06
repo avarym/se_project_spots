@@ -90,5 +90,10 @@ cardLikeBtn.addEventListener("click", function(evt) {
   evt.target.classList.toggle("card__like-btn_active");
 });
 
+const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
+cardDeleteBtn.addEventListener("click", function() {
+  cardElement.remove();
+});
+
 return cardElement;
 }
