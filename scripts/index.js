@@ -23,6 +23,10 @@ const cardLinkInput = newPostModal.querySelector("#card-image-input");
 const cardForm = document.forms["new-post"];
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardContainer = document.querySelector(".cards__list");
+const fullScreenModal = document.querySelector("#full-screen-modal");
+const fullScreenExitBtn = fullScreenModal.querySelector(".modal__exit-btn");
+const fullScreenImage = fullScreenModal.querySelector(".modal__img");
+const fullScreenCaption = fullScreenModal.querySelector(".modal__img-caption");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -48,6 +52,10 @@ newPostBtn.addEventListener("click", function() {
 
 newPostExitBtn.addEventListener("click", function() {
     closeModal(newPostModal);
+});
+
+fullScreenExitBtn.addEventListener("click", function () {
+  closeModal(fullScreenModal);
 });
 
 function handleProfileFormSubmit(evt) {
@@ -94,6 +102,12 @@ const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 cardDeleteBtn.addEventListener("click", function() {
   cardElement.remove();
 });
+
+cardElementImage.addEventListener("click", function () {
+  fullScreenCaption.textContent = `${data.name}`;
+  fullScreenImage.src = `${data.link}`;
+  openModal(fullScreenModal);
+})
 
 return cardElement;
 }
