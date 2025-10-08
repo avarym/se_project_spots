@@ -106,6 +106,7 @@ cardDeleteBtn.addEventListener("click", function() {
 cardElementImage.addEventListener("click", function () {
   fullScreenCaption.textContent = `${data.name}`;
   fullScreenImage.src = `${data.link}`;
+  fullScreenImage.alt = `${data.name}`;
   openModal(fullScreenModal);
 })
 

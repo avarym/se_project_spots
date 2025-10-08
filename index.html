@@ -37,7 +37,7 @@
                             <li class="card">
                                 <img src="" alt="" class="card__img">
                                 <button type="button" class="card__delete-btn">
-                                    <img src="images/Group 35.svg" alt="delete-icon" class="delete-icon">
+                                    <img src="images/Group 35.svg" alt="delete-post" class="delete-icon">
                                 </button>
                                 <div class="card__content">
                                     <h2 class="card__title"></h2>
@@ -57,10 +57,10 @@
                     <h2 class="modal__title">Edit Profile</h2>
                     <form name="edit-profile" class="modal__form">
                         <label for="name" class="modal__label">Name
-                            <input id="name" class="modal__input" type="text" placeholder="Type your name">
+                            <input id="name" class="modal__input" type="text" placeholder="Type your name" required>
                         </label>
                         <label for="description" class="modal__label">Description
-                            <input id="description" class="modal__input" type="text" placeholder="Describe yourself">
+                            <input id="description" class="modal__input" type="text" placeholder="Describe yourself" required>
                         </label>
                         <button type="submit" class="modal__submit-btn">Save</button>
                     </form>
@@ -72,10 +72,10 @@
                     <h2 class="modal__title">New Post</h2>
                     <form name="new-post" class="modal__form">
                         <label for="card-image-input" class="modal__label">Image link
-                            <input id="card-image-input" class="modal__input" type="url" placeholder="Paste a link to the picture">
+                            <input id="card-image-input" class="modal__input" type="url" placeholder="Paste a link to the picture" required>
                         </label>  
                         <label for="card-image-caption" class="modal__label">Caption
-                            <input id="card-image-caption" class="modal__input" type="text" placeholder="Type your caption">
+                            <input id="card-image-caption" class="modal__input" type="text" placeholder="Type your caption" required>
                         </label>
                         <button type="submit" class="modal__submit-btn">Save</button>
                     </form>

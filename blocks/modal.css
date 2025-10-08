@@ -43,6 +43,7 @@
     background-image: url(../images/Property\ 1=Variant2.svg);
     border: none;
     opacity: 40%;
+    cursor: pointer;
 }
 
 .modal__exit-btn:hover {
@@ -128,6 +129,9 @@
 }
 
 @media screen and (max-width: 650px) {
+    .modal {
+        padding: 0 10px;
+    }
     .modal__container {
         padding: 12px;
     }
