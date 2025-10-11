@@ -40,7 +40,7 @@
     height: 40px;
     width: 40px;
     background-color: transparent;
-    background-image: url(../images/Property\ 1=Variant2.svg);
+    background-image: url(../images/exit-icon-dark.svg);
     border: none;
     opacity: 40%;
     cursor: pointer;
@@ -98,7 +98,7 @@
 }
 
 .modal__exit-btn_figure {
-    background-image: url(../images/Group\ 27.svg);
+    background-image: url(../images/exit-icon-light.svg);
     top: 0;
     right: -52px;
     opacity: 100%;
