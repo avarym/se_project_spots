@@ -8,10 +8,8 @@ const initialCards = [
 ];
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const editProfileExitBtn = editProfileModal.querySelector(".modal__exit-btn");
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
-const newPostExitBtn = newPostModal.querySelector(".modal__exit-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const editProfileNameInput = editProfileModal.querySelector("#name");
@@ -24,9 +22,9 @@ const cardForm = document.forms["new-post"];
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardContainer = document.querySelector(".cards__list");
 const fullScreenModal = document.querySelector("#full-screen-modal");
-const fullScreenExitBtn = fullScreenModal.querySelector(".modal__exit-btn");
 const fullScreenImage = fullScreenModal.querySelector(".modal__img");
 const fullScreenCaption = fullScreenModal.querySelector(".modal__img-caption");
+const modalExitBtns = document.querySelectorAll(".modal__exit-btn");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -42,20 +40,15 @@ editProfileBtn.addEventListener("click", function() {
     editProfileDescriptionInput.value = profileDescription.textContent;
 });
 
-editProfileExitBtn.addEventListener("click", function() {
-    closeModal(editProfileModal);
-});
-
 newPostBtn.addEventListener("click", function() {
     openModal(newPostModal);
 });
 
-newPostExitBtn.addEventListener("click", function() {
-    closeModal(newPostModal);
-});
-
-fullScreenExitBtn.addEventListener("click", function () {
-  closeModal(fullScreenModal);
+modalExitBtns.forEach((button) => {
+  button.addEventListener("click", function() {
+    popup = button.closest(".modal");
+    closeModal(popup);
+  }); 
 });
 
 function handleProfileFormSubmit(evt) {
