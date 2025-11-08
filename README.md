@@ -12,13 +12,14 @@ This project is modeled after social media platforms, using a responsive layout 
 * GitHub
 * Git Bash terminal
 * Deployment on GitHub Pages
+* JavaScript
 
 **View my project**
 
  [Link to the Project Site](https://avarym.github.io/se_project_spots/)
- [Link to Video Walkthrough](https://www.loom.com/share/52d161f3a7a14040a3dde6d2c51b25c2?sid=7f3c1096-5c47-4c04-a305-2f58886b419c)
+ [Link to Project Pitch]()
+ Will be added in the following iteration
 
 **Future Plans for the Project**
 
-* add functionality to the site with JavaScript
-* edit profile, new post, and like button functions
+* 

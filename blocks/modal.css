@@ -79,6 +79,23 @@
     border-radius: 8px;
 }
 
+.modal__input_type_error {
+    border-color: #F00;
+}
+
+.modal__input-error {
+    display: none;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #F00;
+}
+
+.modal__input-error_active {
+    display: block;
+}
+
 .modal__submit-btn {
     display: block;
     padding: 0;
@@ -90,6 +107,13 @@
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 16px;
+}
+.modal__submit-btn:hover {
+    opacity: .8;
+}
+
+.modal__submit-btn_disabled {
+    opacity: .5;
 }
 
 .modal__figure {

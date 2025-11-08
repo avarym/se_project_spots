@@ -35,13 +35,14 @@ function closeModal(modal) {
 }
 
 editProfileBtn.addEventListener("click", function() {
-    openModal(editProfileModal);
-    editProfileNameInput.value = profileName.textContent;
-    editProfileDescriptionInput.value = profileDescription.textContent;
+  editProfileNameInput.value = profileName.textContent;
+  editProfileDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editProfileModal, [editProfileNameInput, editProfileDescriptionInput], settings);
+  openModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", function() {
-    openModal(newPostModal);
+  openModal(newPostModal);
 });
 
 modalExitBtns.forEach((button) => {
@@ -52,10 +53,11 @@ modalExitBtns.forEach((button) => {
 });
 
 function handleProfileFormSubmit(evt) {
-    evt.preventDefault();
-    profileName.textContent = editProfileNameInput.value;
-    profileDescription.textContent = editProfileDescriptionInput.value;
-    closeModal(editProfileModal);
+  evt.preventDefault();
+  profileName.textContent = editProfileNameInput.value;
+  profileDescription.textContent = editProfileDescriptionInput.value;
+  closeModal(editProfileModal);
+  disableButton(editProfileSubmitBtn, settings);
 }
 
 editProfileModal.addEventListener('submit', handleProfileFormSubmit);
@@ -69,6 +71,7 @@ function handleNewPostSubmit(evt) {
   cardContainer.prepend(getCardElement(newCardData));
   closeModal(newPostModal);
   cardForm.reset();
+  disableButton(newPostSubmitBtn, settings);
 }
 
 newPostModal.addEventListener('submit', handleNewPostSubmit);

@@ -57,10 +57,12 @@
                     <h2 class="modal__title">Edit Profile</h2>
                     <form name="edit-profile" class="modal__form">
                         <label for="name" class="modal__label">Name
-                            <input id="name" class="modal__input" type="text" placeholder="Type your name" required>
+                            <input id="name" class="modal__input" type="text" placeholder="Type your name" required minlength="2" maxlength="40">
+                            <span class="name-error modal__input-error">Error Message</span>
                         </label>
                         <label for="description" class="modal__label">Description
-                            <input id="description" class="modal__input" type="text" placeholder="Describe yourself" required>
+                            <input id="description" class="modal__input" type="text" placeholder="Describe yourself" required minlength="2" maxlength="200">
+                            <span class="description-error modal__input-error">Error Message</span>
                         </label>
                         <button type="submit" class="modal__submit-btn">Save</button>
                     </form>
@@ -73,9 +75,11 @@
                     <form name="new-post" class="modal__form">
                         <label for="card-image-input" class="modal__label">Image link
                             <input id="card-image-input" class="modal__input" type="url" placeholder="Paste a link to the picture" required>
+                            <span class="card-image-input-error modal__input-error"></span>
                         </label>  
                         <label for="card-image-caption" class="modal__label">Caption
-                            <input id="card-image-caption" class="modal__input" type="text" placeholder="Type your caption" required>
+                            <input id="card-image-caption" class="modal__input" type="text" placeholder="Type your caption" required minlength="2" maxlength="30">
+                            <span class="card-image-caption-error modal__input-error"></span>
                         </label>
                         <button type="submit" class="modal__submit-btn">Save</button>
                     </form>
@@ -90,5 +94,6 @@
             </div>
         </div>   
         <script defer src="scripts/index.js"></script> 
+        <script defer src="scripts/validation.js"></script>
     </body>
 </html>
