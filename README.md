@@ -17,6 +17,7 @@ This project is modeled after social media platforms, using a responsive layout 
 **View my project**
 
  [Link to the Project Site](https://avarym.github.io/se_project_spots/)
+ 
  [Link to Project Pitch]()
  Will be added in the following iteration
 

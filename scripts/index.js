@@ -25,13 +25,30 @@ const fullScreenModal = document.querySelector("#full-screen-modal");
 const fullScreenImage = fullScreenModal.querySelector(".modal__img");
 const fullScreenCaption = fullScreenModal.querySelector(".modal__img-caption");
 const modalExitBtns = document.querySelectorAll(".modal__exit-btn");
+const modals = document.querySelectorAll(".modal");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", escapeModal);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", escapeModal);
+}
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", function(evt) {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(evt.target.closest(".modal"));
+    }
+  });
+});  
+
+function escapeModal(evt) {
+  if (evt.key == "Escape") {
+    closeModal(document.querySelector(".modal.modal_opened"));
+  }
 }
 
 editProfileBtn.addEventListener("click", function() {
@@ -47,7 +64,7 @@ newPostBtn.addEventListener("click", function() {
 
 modalExitBtns.forEach((button) => {
   button.addEventListener("click", function() {
-    popup = button.closest(".modal");
+    const popup = button.closest(".modal");
     closeModal(popup);
   }); 
 });
@@ -82,29 +99,31 @@ initialCards.forEach(function (item) {
 });
 
 function getCardElement(data) {
-let cardElement = cardTemplate.cloneNode(true);
-const cardElementTitle = cardElement.querySelector(".card__title");
-const cardElementImage = cardElement.querySelector(".card__img");
-cardElementImage.alt = `${data.name}`;
-cardElementImage.src = `${data.link}`;
-cardElementTitle.textContent = `${data.name}`;
+  let cardElement = cardTemplate.cloneNode(true);
+  const cardElementTitle = cardElement.querySelector(".card__title");
+  const cardElementImage = cardElement.querySelector(".card__img");
+  cardElementImage.alt = `${data.name}`;
+  cardElementImage.src = `${data.link}`;
+  cardElementTitle.textContent = `${data.name}`;
 
-const cardLikeBtn = cardElement.querySelector(".card__like-btn");
-cardLikeBtn.addEventListener("click", function(evt) {
-  evt.target.classList.toggle("card__like-btn_active");
-});
 
-const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
-cardDeleteBtn.addEventListener("click", function() {
-  cardElement.remove();
-});
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  cardLikeBtn.addEventListener("click", function(evt) {
+    evt.target.classList.toggle("card__like-btn_active");
+  });
 
-cardElementImage.addEventListener("click", function () {
-  fullScreenCaption.textContent = `${data.name}`;
-  fullScreenImage.src = `${data.link}`;
-  fullScreenImage.alt = `${data.name}`;
-  openModal(fullScreenModal);
-})
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
+  cardDeleteBtn.addEventListener("click", function() {
+    cardElement.remove();
+  });
 
-return cardElement;
+  cardElementImage.addEventListener("click", function () {
+    fullScreenCaption.textContent = `${data.name}`;
+    fullScreenImage.src = `${data.link}`;
+    fullScreenImage.alt = `${data.name}`;
+    openModal(fullScreenModal);
+    
+  });
+
+  return cardElement;
 }
